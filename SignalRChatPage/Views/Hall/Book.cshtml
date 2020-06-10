@@ -1,0 +1,59 @@
+﻿@model SignalRChatPage.Models.MeetInfoModel
+@{
+    ViewData["Title"] = "Book";
+    Layout = null;
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/Hall_Book.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="main_content">
+        <div id="layout_div">
+            <div id="head">
+                <h3>预定会议</h3>
+                <hr />
+            </div>
+            <form asp-action="Book" asp-controller="Hall" method="post">
+                <div id="info">
+                    <div>
+                        会议编号: <input type="text" asp-for="@Model.RoomNo" value="" />
+                        <span asp-validation-for="@Model.RoomNo" class="text-danger"></span>
+                    </div>
+                    <div>
+                        会议主题: <input type="text" asp-for="@Model.Theme" value="" />
+                        <span asp-validation-for="@Model.Theme" class="text-danger"></span>
+                    </div>
+                    <div>
+                        开始时间: <input type="datetime-local" asp-for="@Model.StartTime" value="" />
+                        <span asp-validation-for="@Model.StartTime" class="text-danger"></span>
+                    </div>
+                    <div>
+                        结束时间: <input type="datetime-local" asp-for="@Model.EndTime" value="" />
+                        <span asp-validation-for="@Model.EndTime" class="text-danger"></span>
+                    </div>
+                    <div>
+                        会议密码: <input type="password" asp-for="@Model.Password" value="" />
+                        <span asp-validation-for="@Model.Password" class="text-danger"></span>
+                    </div>
+
+                </div>
+            </form>
+            <div id="btn_group">
+                <button type="button" class="btn btn-secondary" id="cancle">取消</button>
+                <button type="button" class="btn btn-secondary" id="book">预定</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.js" type="text/javascript"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/js/Hall_Book.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>页面布局</title>
+    <link href="~/css/Chat_Index.css" rel="stylesheet" />
+</head>
+<body >
+    @*遮罩层*@
+    <div class="shadow"></div>
+
+    @*弹窗层*@
+    <div id="interaction">
+        <div id="button_group">
+            <button id="close_messagebox">Close</button>
+            <button id="ok_messagebox">OK</button>
+        </div>
+        <div id="input_contain">
+            <textarea id="pastecontent"></textarea>
+        </div>
+    </div>
+
+    <div id="main_content">
+        <div id="first_column_content">
+            <div id="room_operation">
+                <br />
+                <div>                    
+                    房间信息：<input type="text" id="roominfo_text" value="roomno:9999  password:123456" readonly/>
+                    <br />
+                    <button class="btn-dark" id="leaveroom">LeaveRoom</button>
+                </div>
+                <br />              
+                <hr />
+                <div>
+                    消息：<input type="text" id="message_text" placeholder="请输入聊天内容"/>
+                            <br />
+                            <button class="btn-dark" id="sendmessage">SendMessage</button>
+                </div>
+                @*房间操作模块*@
+            </div>
+            <div id="chat_record">
+                聊天记录模块
+            </div>
+        </div>
+        <div id="sencond_column_content">
+            <div id="meet_abstract">
+                会议摘要模块
+            </div>
+            <div id="unclassified_blackboard">
+                <button type="button" id="noclassified_add" class="add_paste"></button>
+            </div>
+            <div id="classified_blackboard">
+                <button type="button" id="classified_add" class="add_paste"></button>
+            </div>
+        </div>
+        <div id="third_column_content">
+            <div id="private_blackboard">
+                私人便贴记录模块
+            </div>
+            <div id="meet_result">
+                会议结果模块
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="~/lib/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="~/js/Chat_index.js"></script>
+</body>
+</html>
+
+

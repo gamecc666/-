@@ -1,0 +1,42 @@
+﻿@model SignalRChatPage.Models.RoomModel
+@{
+    ViewData["Title"] = "Login";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <link href="~/css/RoomEntrance_login.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="main_content">
+        <div id="tip_window">
+            <form asp-controller="RoomEntrance" asp-action="Login" method="post">
+                <span id="NickName">
+                    用户名：<input type="text" asp-for="@Model.NickName" value="" />
+                        <span asp-validation-for="@Model.NickName" class="text-danger"></span>
+                </span>
+                <br />
+                <span>
+                    房间号：<input type="text" asp-for="@Model.RoomNo" value="" />
+                        <span asp-validation-for="@Model.RoomNo" class="text-danger"></span>
+                </span>
+                <br />
+                <span>
+                    密码：<input type="text" asp-for="@Model.RoomPassword"  value="" />
+                       <span asp-validation-for="@Model.RoomPassword" class="text-danger"></span>
+                </span>
+                <br />
+                <input type="submit" value="JoinRoom" />
+            </form>
+
+        </div>
+    </div>
+    <script src="~/js/RoomEntrance_login.js"></script>
+</body>
+</html>

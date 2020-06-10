@@ -1,0 +1,163 @@
+﻿/****************************整体布局*****************************/
+html,body{
+    height:100%;
+    width:100%;
+    margin:0px
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+#main_content {
+    background-color: aqua;
+    width: 80%;
+    height: 80%;
+    display:flex;    
+    justify-content:space-evenly;
+}
+/*****************************第一列******************************/
+#first_column_content {
+    background-color: brown;
+    width: 32%;
+    height: 100%;   
+    display:flex;
+    flex-direction:column;
+}
+#room_operation{
+    background-color:antiquewhite;
+    height:20%;   
+}
+#chat_record{
+    background-color:blue;
+    height:80%;
+}
+#roominfo_text{
+    width:200px;    
+}
+.btn-dark{
+    float:right;
+}
+/*****************************第二列******************************/
+#sencond_column_content {
+    background-color: crimson;
+    width: 32%;
+    height: 100%;
+}
+/*会议摘要*/
+#meet_abstract {
+    background-color:blueviolet;
+    height:10%;
+    width:auto
+}
+/*未分类便贴的公示板*/
+#unclassified_blackboard {
+    background-color: cadetblue;
+    height: 45%;
+    width: 100%;
+    max-height: 45%;
+    overflow: auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fill,80px);
+    grid-template-rows:repeat(auto-fill,100px);
+    grid-row-gap:5px;   
+    justify-content:space-evenly;
+}
+/*点击增加按钮之后出现的盛放textarea的弹窗*/
+.item {
+    position: relative;
+    width: 80px;
+    height: 100px;
+    font-size: 2em;
+    text-align: center;
+    /*border:1px solid #e5e4e9;*/
+}
+/*弹窗内部输入框的容器大小*/
+#input_contain{
+    width:100%;
+    height:100%;    
+}
+/*item容器里面的textarea*/
+.textarea_unclass,.textarea_class {
+    background-color: darkgray;
+    color: white;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    resize: none;
+    padding: 0px;
+    border-width: 0px;
+}
+#classified_blackboard {
+    background-color: cornsilk;
+    height: 45%;
+    width: 100%;
+    max-height: 45%;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,80px);
+    grid-template-rows: repeat(auto-fill,100px);
+    grid-row-gap:5px;
+    justify-content:space-evenly
+}
+/*增加按钮*/
+.add_paste {
+    border-width: 2px;
+    width: 80px;
+    height: 100px;
+    background-image: url('../images/add_pic.jpg');
+    background-repeat: no-repeat;
+    padding:0px;
+    border-width:0px;
+}
+/*便贴删除按钮*/
+#delete {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+}
+/*便贴放大之后以弹窗的形式展现*/
+#interaction {
+    width: 30%;
+    height: 35%;
+    background-color: aquamarine;
+    z-index: 999;
+    position: absolute;
+    /*margin-left: 35%;*/
+}
+/*弹窗里面的输入框（textarea）*/
+#pastecontent {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    padding: 0px;
+    border-width:0px;
+}
+/*遮罩层*/
+.shadow {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 998;
+    background-color: black;
+    opacity: 0.6;
+}
+/************************第三列***************************/
+#third_column_content {
+    background-color: deeppink;
+    width: 32%;
+    height: 100%;
+}
+
+#private_blackboard {
+    background-color: chocolate;
+    height: 70%;
+    width: auto;
+}
+
+#meet_result {
+    height: auto;
+    width: 30%;
+}

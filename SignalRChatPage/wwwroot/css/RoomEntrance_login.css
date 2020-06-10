@@ -1,0 +1,22 @@
+﻿html,body {
+    height:100%;
+    overflow:hidden;
+}
+/*.container,main
+{
+    height:100%;
+    background-color:burlywood;
+}*/
+#main_content {
+    height: 100%;
+    width: 100%;   
+}
+#tip_window {
+    background-color:darkgray; 
+    width:400px;
+    height: 300px;
+    margin:15% auto;
+}
+/*#NickName{
+    display:none;
+}*/
