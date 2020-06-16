@@ -9,7 +9,7 @@
     align-items: center
 }
 #layout_div {    
-    width: 550px;
+    width: 900px;
     height: 350px;
     background-color:darkgray;
     display:flex;
@@ -46,7 +46,7 @@
 }
 .item_info {
     width: 95%;
-    height: 50px;
+    height: 60px;
     background-color: darkgray;
     border:1px solid #000000;
     margin-bottom:4px;

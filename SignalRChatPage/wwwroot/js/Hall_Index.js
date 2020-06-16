@@ -73,5 +73,5 @@ function DeleteBtnEvent(roomNo,dom) {
     });
 }
 function EditBtnEvent(roomno) {
-
+    window.location.href = `/Hall/Book/${roomno}`; 
 }

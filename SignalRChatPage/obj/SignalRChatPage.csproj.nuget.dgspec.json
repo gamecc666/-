@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "G:\\CoreSignalRChat\\SignalRChatPage\\SignalRChatPage.csproj": {}
+    "G:\\VS2019\\聊天室\\SignalRChatPage\\SignalRChatPage.csproj": {}
   },
   "projects": {
-    "G:\\CoreSignalRChat\\SignalRChatPage\\SignalRChatPage.csproj": {
+    "G:\\VS2019\\聊天室\\SignalRChatPage\\SignalRChatPage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\CoreSignalRChat\\SignalRChatPage\\SignalRChatPage.csproj",
+        "projectUniqueName": "G:\\VS2019\\聊天室\\SignalRChatPage\\SignalRChatPage.csproj",
         "projectName": "SignalRChatPage",
-        "projectPath": "G:\\CoreSignalRChat\\SignalRChatPage\\SignalRChatPage.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "G:\\CoreSignalRChat\\SignalRChatPage\\obj\\",
+        "projectPath": "G:\\VS2019\\聊天室\\SignalRChatPage\\SignalRChatPage.csproj",
+        "packagesPath": "C:\\Users\\gamecc\\.nuget\\packages\\",
+        "outputPath": "G:\\VS2019\\聊天室\\SignalRChatPage\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gamecc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

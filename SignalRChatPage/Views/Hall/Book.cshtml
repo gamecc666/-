@@ -17,27 +17,72 @@
             <div id="head">
                 <h3>预定会议</h3>
                 <hr />
-            </div>
+            </div>            
             <form asp-action="Book" asp-controller="Hall" method="post">
                 <div id="info">
                     <div>
-                        会议编号: <input type="text" asp-for="@Model.RoomNo" value="" />
+                        会议编号: @{
+                            if (Model == null)
+                            {
+                                <input type="text" asp-for="@Model.RoomNo" value="" />
+                            }
+                            else
+                            {
+                                <input type="text" asp-for="@Model.RoomNo" value="@Model.RoomNo" readonly />
+                            }
+                        }
                         <span asp-validation-for="@Model.RoomNo" class="text-danger"></span>
                     </div>
                     <div>
-                        会议主题: <input type="text" asp-for="@Model.Theme" value="" />
+                        会议主题: @{
+                            if (Model == null)
+                            {
+                                <input type="text" asp-for="@Model.Theme" value="" />
+                            }
+                            else
+                            {
+                                <input type="text" asp-for="@Model.Theme" value="@Model.Theme" />
+                            }
+                        }
                         <span asp-validation-for="@Model.Theme" class="text-danger"></span>
                     </div>
                     <div>
-                        开始时间: <input type="datetime-local" asp-for="@Model.StartTime" value="" />
+                        开始时间:@{
+                            if (Model == null)
+                            {
+                                <input type="datetime-local" asp-for="@Model.StartTime" value="" />
+                            }
+                            else
+                            {
+                                <input type="datetime-local" asp-for="@Model.StartTime" value="@Model.ConvertToCustomizeForamtStr(Model.StartTime)" />
+                            }
+                        }
                         <span asp-validation-for="@Model.StartTime" class="text-danger"></span>
                     </div>
                     <div>
-                        结束时间: <input type="datetime-local" asp-for="@Model.EndTime" value="" />
+                        结束时间:@{
+                            if (Model == null)
+                            {
+                                <input type="datetime-local" asp-for="@Model.EndTime" value="" />
+                            }
+                            else
+                            {
+                                <input type="datetime-local" asp-for="@Model.EndTime" value="@Model.ConvertToCustomizeForamtStr(Model.EndTime)" />
+                            }
+                        }
                         <span asp-validation-for="@Model.EndTime" class="text-danger"></span>
                     </div>
                     <div>
-                        会议密码: <input type="password" asp-for="@Model.Password" value="" />
+                        会议密码:@{
+                            if (Model == null)
+                            {
+                                <input type="text" asp-for="@Model.Password" value="" />
+                            }
+                            else
+                            {
+                                <input type="text" asp-for="@Model.Password" value="@Model.Password" />
+                            }
+                        }
                         <span asp-validation-for="@Model.Password" class="text-danger"></span>
                     </div>
 
